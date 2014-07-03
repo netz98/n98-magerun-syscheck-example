@@ -1,0 +1,14 @@
+autoloaders:
+  Acme\ExampleCheckModule: %module%/src
+
+commands:
+  N98\Magento\Command\System\CheckCommand:
+    checks:
+      my-own-group:
+        - Acme\ExampleCheckModule\MySimpleCheck
+        - Acme\ExampleCheckModule\MyStoreCheck
+        - Acme\ExampleCheckModule\MyWebsiteCheck
+        - Acme\ExampleCheckModule\MySimpleCheckWithCommandConfig
+
+    my-own-config-part:
+      foo: bar
